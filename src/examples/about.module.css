@@ -1,0 +1,11 @@
+.page {
+  color: firebrick;
+}
+
+.page h2 {
+  color: yellow;
+}
+
+.text {
+  text-transform: uppercase;
+}

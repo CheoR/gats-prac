@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import WrapperLayout from "../components/WrapperLayout"
 import { page, text } from "../examples/home.module.css"
-
+import { ExampleButton } from "../examples/button"
 
 // const headerStyle = {
 //   color: "red",
@@ -13,6 +13,7 @@ export default function Home() {
   return (
     <WrapperLayout>
       <div className={page}>
+        <ExampleButton>I am styled button </ExampleButton>
         <h1>H1 Home Page</h1>
         <h1>H1 Again</h1>
         <h1>H1 Another</h1>

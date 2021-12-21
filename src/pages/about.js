@@ -1,12 +1,11 @@
 import React from 'react'
-import Navbar from "../components/Navbar"
+import WrapperLayout from '../components/WrapperLayout'
 
 const About = () => {
   return (
-    <div>
-      <Navbar />
+    <WrapperLayout>
       <h2>I am Export Default about page.</h2>
-    </div>
+    </WrapperLayout>
   )
 }
 

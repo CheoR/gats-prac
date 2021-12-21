@@ -11,7 +11,8 @@ export default function Home() {
   return (
     <WrapperLayout>
       <h1 style={headerStyle}>Home Page: I now have links Hello World</h1>
-    
+      <h1>Also H1 tag</h1>
+      <h1>Another H1 Tag</h1>
       <div>
         <Link to="/about">About</Link>
       </div>

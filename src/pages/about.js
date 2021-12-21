@@ -1,9 +1,11 @@
 import React from 'react'
+import Navbar from "../components/Navbar"
 
 const About = () => {
   return (
     <div>
-      I am Export Default about page.
+      <Navbar />
+      <h2>I am Export Default about page.</h2>
     </div>
   )
 }

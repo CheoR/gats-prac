@@ -2,10 +2,15 @@ import React from "react"
 import { Link } from "gatsby"
 import WrapperLayout from "../components/WrapperLayout"
 
+const headerStyle = {
+  color: "red",
+  textTransform: "capitalize"
+}
+
 export default function Home() {
   return (
     <WrapperLayout>
-      <h1>Home Page: I now have links Hello World</h1>
+      <h1 style={headerStyle}>Home Page: I now have links Hello World</h1>
     
       <div>
         <Link to="/about">About</Link>

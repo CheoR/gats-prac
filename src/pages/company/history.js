@@ -1,9 +1,11 @@
 import React from 'react'
+import { Link } from 'gatsby'
 
 const history = () => {
   return (
     <div>
-      History page nested in company directory.
+      <h2>History page nested in company directory.</h2>
+      <Link to="/">Home</Link>
     </div>
   )
 }

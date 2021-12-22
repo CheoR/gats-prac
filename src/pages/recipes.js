@@ -1,12 +1,12 @@
 import React from 'react'
 import WrapperLayout from '../components/WrapperLayout'
 
-const Error = () => {
+const Recipes = () => {
   return (
     <WrapperLayout>
-      <h1>Error Page</h1>
+      <h1>Recepies Page</h1>
     </WrapperLayout>
   )
 }
 
-export default Error
+export default Recipes

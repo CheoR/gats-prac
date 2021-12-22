@@ -1,12 +1,15 @@
 import React from 'react'
 import WrapperLayout from '../components/WrapperLayout'
-import { page, text } from "../examples/about.module.css"
+// import { page, text } from "../examples/about.module.css"
 
-import styled from 'styled-components'
+// import styled from 'styled-components'
 
 
 const About = () => {
   return (
+    <WrapperLayout>
+      <h1>About Page</h1>
+    </WrapperLayout>
     // <WrapperLayout>
     //   <div className={page}>
     //     <h2>I am Export Default about page.</h2>
@@ -16,27 +19,27 @@ const About = () => {
     //     </p>
     //   </div>
     // </WrapperLayout>
-    <WrapperLayout>
-      <Wrapper>
-        <h2>I am Export Default about page.</h2>
-        <h2>Another h2</h2>
-        <p className="text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur adipisci aut vitae illo ab esse quo inventore eius cumque corporis?
-        </p>
-      </Wrapper>
-    </WrapperLayout>
+    // <WrapperLayout>
+    //   <Wrapper>
+    //     <h2>I am Export Default about page.</h2>
+    //     <h2>Another h2</h2>
+    //     <p className="text">
+    //       Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur adipisci aut vitae illo ab esse quo inventore eius cumque corporis?
+    //     </p>
+    //   </Wrapper>
+    // </WrapperLayout>
   )
 }
 
-const Wrapper = styled.section`
-  color: orange;
+// const Wrapper = styled.section`
+//   color: orange;
 
-  h2 {
-    color: blue;
-  }
+//   h2 {
+//     color: blue;
+//   }
 
-  .text {
-    text-transform: capitalize;
-  }
-`
+//   .text {
+//     text-transform: capitalize;
+//   }
+// `
 export default About

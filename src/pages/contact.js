@@ -1,10 +1,11 @@
 import React from 'react'
+import WrapperLayout from '../components/WrapperLayout'
 
 export default function Contact() {
   return (
-    <div>
-      Function declaration contact page. 
-    </div>
+    <WrapperLayout>
+      <h1>Function declaration contact page. </h1>
+    </WrapperLayout>
   )
 }
 

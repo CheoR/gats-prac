@@ -1,8 +1,8 @@
 import React from "react"
 import { Link } from "gatsby"
 import WrapperLayout from "../components/WrapperLayout"
-import { page, text } from "../examples/home.module.css"
-import { ExampleButton } from "../examples/button"
+// import { page, text } from "../examples/home.module.css"
+// import { ExampleButton } from "../examples/button"
 
 // const headerStyle = {
 //   color: "red",
@@ -12,7 +12,8 @@ import { ExampleButton } from "../examples/button"
 export default function Home() {
   return (
     <WrapperLayout>
-      <div className={page}>
+      <h1>Home Page</h1>
+      {/* <div className={page}>
         <ExampleButton>I am styled button </ExampleButton>
         <h1>H1 Home Page</h1>
         <h1>H1 Again</h1>
@@ -21,7 +22,7 @@ export default function Home() {
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus numquam fugiat repudiandae, officiis illo ut! Modi eveniet, consequuntur ipsa beatae natus animi error quo ab magnam maxime odio sit iste totam minima architecto cum unde. Voluptatum delectus adipisci earum quasi vero doloremque illo enim incidunt, voluptas ratione corporis eveniet maiores?
         </p>
       </div>
-      {/* <h1 style={headerStyle}>Home Page: I now have links Hello World</h1>
+      <h1 style={headerStyle}>Home Page: I now have links Hello World</h1>
       <h1>Also H1 tag</h1>
       <h1>Another H1 Tag</h1>
       <div>

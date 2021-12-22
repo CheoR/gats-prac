@@ -2,7 +2,8 @@ import React from 'react'
 import Footer from './Footer'
 import Navbar from './Navbar'
 
-import "./layout.css"
+import "normalize.css"
+import "../assets/css/main.css"
 
 const WrapperLayout = ({ children }) => {
   return (

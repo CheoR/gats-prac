@@ -1,45 +1,37 @@
 import React from 'react'
+
+import { StaticImage } from 'gatsby-plugin-image'
+import { Link } from 'gatsby'
+
 import WrapperLayout from '../components/WrapperLayout'
-// import { page, text } from "../examples/about.module.css"
-
-// import styled from 'styled-components'
-
 
 const About = () => {
   return (
     <WrapperLayout>
-      <h1>About Page</h1>
+      <main className="page">
+        <section className="about-page">
+          <article>
+            <h2>About Page</h2>
+            <p>
+              Enamel pin whatever gentrify tofu DIY wayfarers. Trust fund fashion axe knausgaard franzen meditation kinfolk enamel pin sustainable pour-over aesthetic air plant before they sold out. Synth williamsburg enamel pin banh mi. Street art umami pop-up, adaptogen 8-bit chia prism kombucha seitan. Deep v jianbing cardigan master cleanse tote bag celiac twee.
+            </p>
+            <p>
+              Aesthetic tumblr everyday carry scenester disrupt freegan tbh helvetica cloud bread. Stumptown beard scenester roof party neutra keffiyeh, edison bulb banh mi lo-fi austin asymmetrical iPhone.
+            </p>
+            <Link to="/contact" className="btn">
+              Contact
+            </Link>
+          </article>
+          <StaticImage
+            src="../assets/images/about.jpeg"
+            alt="Hand pouring salt on onion and garlic chips in bowl"
+            className="about-img"
+            placeholder='tracedSVG'
+          />
+        </section>
+      </main>
     </WrapperLayout>
-    // <WrapperLayout>
-    //   <div className={page}>
-    //     <h2>I am Export Default about page.</h2>
-    //     <h2>Another h2</h2>
-    //     <p className={text}>
-    //       Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur adipisci aut vitae illo ab esse quo inventore eius cumque corporis?
-    //     </p>
-    //   </div>
-    // </WrapperLayout>
-    // <WrapperLayout>
-    //   <Wrapper>
-    //     <h2>I am Export Default about page.</h2>
-    //     <h2>Another h2</h2>
-    //     <p className="text">
-    //       Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur adipisci aut vitae illo ab esse quo inventore eius cumque corporis?
-    //     </p>
-    //   </Wrapper>
-    // </WrapperLayout>
   )
 }
 
-// const Wrapper = styled.section`
-//   color: orange;
-
-//   h2 {
-//     color: blue;
-//   }
-
-//   .text {
-//     text-transform: capitalize;
-//   }
-// `
 export default About

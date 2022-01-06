@@ -14,11 +14,30 @@ const ComponentName = () => {
           description
           simpledata
           title
+          complexData {
+            age
+            name
+          }
         }
       }
     }
   `)
-  return <pre>{JSON.stringify(data, null, 4)}</pre>
+  return (
+    <div>
+      <h2>{data.site.siteMetadata.person.name}</h2>
+      <div>
+        {
+          data.site.siteMetadata.complexData.map((item, idx) => {
+            return (
+              <p key={idx}>
+                {item.name}: {item.age}
+              </p>
+            )
+          })
+        }
+      </div>
+    </div>
+  )
 }
 
 export default ComponentName

@@ -1,9 +1,7 @@
 import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import WrapperLayout from "../components/WrapperLayout"
-
 import FetchData from "../examples/fetchData"
-
 export default function Home() {
   return (
     <WrapperLayout>

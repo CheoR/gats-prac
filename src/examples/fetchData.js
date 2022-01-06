@@ -24,12 +24,21 @@ const getData = graphql`
 `
 function FetchData() {
 
-  const data = useStaticQuery(getData)
+  const { 
+    site: { 
+      siteMetadata: { 
+        title, 
+        person 
+      }
+    } 
+  } = useStaticQuery(getData)
 
   return (
     <div>
       <h1>HolaCola FetchData</h1>
-      Name is : {data.site.siteMetadata.person.name}
+      <p>Title: { title }</p>
+<p></p>
+      <p>Name is : {person.name}</p>
     </div>
   )
 }

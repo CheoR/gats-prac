@@ -1,35 +1,16 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import WrapperLayout from '../components/WrapperLayout'
+import Gallery from '../examples/Gallery'
 
-const testing = (props) => {
-  console.log(props)
-  const author = props.data.site.info.author
+const Testing = () => {
   return (
-    <div>
-      <h2>TestingCol</h2>
-      <p>{author}</p>
-    </div>
+    <WrapperLayout>
+      <main>
+        <h2>TestingCol</h2>
+        <Gallery />
+      </main>
+    </WrapperLayout>
   )
 }
 
-export const data = graphql`
-{
-    site {
-      info:siteMetadata {
-        author
-        person {
-          age
-          name
-        }
-        description
-        simpledata
-        title
-        complexData {
-          age
-          name
-        }
-      }
-    }
-  }
-`
-export default testing
+export default Testing

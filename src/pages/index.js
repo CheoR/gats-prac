@@ -1,6 +1,7 @@
 import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import WrapperLayout from "../components/WrapperLayout"
+import AllRecipies from "../components/AllRecipies"
 export default function Home() {
   return (
     <WrapperLayout>
@@ -21,6 +22,7 @@ export default function Home() {
             </div>
           </div>
         </header>
+        <AllRecipies />
       </main>
     </WrapperLayout>
   )

@@ -2,6 +2,7 @@ import React from 'react'
 import { Link, graphql } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { BsClockHistory, BsClock, BsPeople } from 'react-icons/bs'
+import slugify from 'slugify'
 
 import WrapperLayout from '../components/WrapperLayout'
 
@@ -54,8 +55,9 @@ const RecepieTemplate = ({ data }) => {
                 Tags: 
                 {
                   tags.map((tag, idx) => {
+                    const slug = slugify(tag, { lower: true })
                     return (
-                      <Link to={`/${tag}`} key={idx} >
+                      <Link to={`/tags/${slug}`} key={idx} >
                         {tag}
                       </Link>
                     )

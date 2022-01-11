@@ -1,13 +1,12 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
+import slugify from 'slugify'
+
 import WrapperLayout from '../components/WrapperLayout'
 import setupTags from '../utils/setupTags'
 
 
 const Tags = ({ data }) => {
-  console.log('in tags')
-  console.log(data)
-  console.log('---------')
   const newTags = setupTags(data.allContentfulRecipie.nodes)
 
   return (
@@ -17,8 +16,9 @@ const Tags = ({ data }) => {
           {
             newTags.map((tag, idx) => {
               const [text,value] = tag
+              const slug = slugify(text, { lower: true })
               return (
-                <Link to={`/${text}`} key={idx} className="tag">
+                <Link to={`/tags/${slug}`} key={idx} className="tag">
                   <h5>{text}</h5>
                   <p>
                     {value} recipe

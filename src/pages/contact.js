@@ -1,7 +1,10 @@
 import React from 'react'
-import WrapperLayout from '../components/WrapperLayout'
+import { Link, graphql } from 'gatsby'
 
-export default function Contact() {
+import WrapperLayout from '../components/WrapperLayout'
+import RecipiesList from '../components/RecipiesList'
+
+export default function Contact({ data: { allContentfulRecipie: { nodes: recipes }} }) {
   return (
     <WrapperLayout>
       <main className="page">
@@ -36,10 +39,36 @@ export default function Contact() {
             </form>
           </article>
         </section>
+        <section className="featured-recipes">
+          <h5>simple and delicous</h5>
+          <RecipiesList recipes={recipes} />
+        </section>
       </main>
     </WrapperLayout>
   )
 }
+
+export const query = graphql`
+  {
+    allContentfulRecipie(
+      filter: {featured: {eq: true}}
+      sort: {order: ASC, fields: title}
+    ) {
+      nodes {
+        id
+        title
+        cookTime
+        prepTime
+        image {
+          gatsbyImageData(layout: CONSTRAINED, placeholder: DOMINANT_COLOR)
+        }
+        content {
+          tags
+        }
+      }
+    }
+  }
+`
 
 // import React, { Component } from 'react'
 

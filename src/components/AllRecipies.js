@@ -25,7 +25,6 @@ export const query = graphql`
 const AllRecipies = () => {
   const data = useStaticQuery(query)
   const recipes = data.allContentfulRecipie.nodes
-  console.log(recipes)
 
   return (
     <section className="recipes-container">

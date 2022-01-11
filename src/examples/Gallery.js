@@ -39,8 +39,6 @@ const Wrapper = styled.section`
 
 const Gallery = () => {
   const data = useStaticQuery(query)
-  console.log(data)
-
   const nodes = data.allFile.nodes
 
   return (

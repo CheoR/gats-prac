@@ -1,11 +1,12 @@
 import React from 'react'
 
 import { StaticImage } from 'gatsby-plugin-image'
-import { Link } from 'gatsby'
+import { Link, graphql } from 'gatsby'
 
 import WrapperLayout from '../components/WrapperLayout'
+import RecipiesList from '../components/RecipiesList'
 
-const About = () => {
+const About = ({ data: { allContentfulRecipie: { nodes: recipes }} }) => {
   return (
     <WrapperLayout>
       <main className="page">
@@ -29,9 +30,35 @@ const About = () => {
             placeholder='tracedSVG'
           />
         </section>
+        <section className="featured-recipes">
+          <h5>simple and delicous</h5>
+          <RecipiesList recipes={recipes} />
+        </section>
       </main>
     </WrapperLayout>
   )
 }
+
+export const query = graphql`
+  {
+    allContentfulRecipie(
+      filter: {featured: {eq: true}}
+      sort: {order: ASC, fields: title}
+    ) {
+      nodes {
+        id
+        title
+        cookTime
+        prepTime
+        image {
+          gatsbyImageData(layout: CONSTRAINED, placeholder: DOMINANT_COLOR)
+        }
+        content {
+          tags
+        }
+      }
+    }
+  }
+`
 
 export default About

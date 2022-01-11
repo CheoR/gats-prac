@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 
 import WrapperLayout from '../components/WrapperLayout'
 import RecipiesList from '../components/RecipiesList'
@@ -22,7 +22,11 @@ export default function Contact({ data: { allContentfulRecipie: { nodes: recipes
             </p>
           </article>
           <article>
-            <form className="form contact-form">
+            <form
+              className="form contact-form"
+              action="https://formspree.io/f/xjvlgbjy"
+              method="POST"
+            >
               <div className="form-row">
                 <label htmlFor="name">Name</label>
                 <input type="text" name="name" id="name" />

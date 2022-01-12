@@ -5,10 +5,12 @@ import { Link, graphql } from 'gatsby'
 
 import WrapperLayout from '../components/WrapperLayout'
 import RecipiesList from '../components/RecipiesList'
+import SEO from '../components/SEO'
 
 const About = ({ data: { allContentfulRecipie: { nodes: recipes }} }) => {
   return (
     <WrapperLayout>
+      <SEO title="About Moo Page" description="I am the about page"/>
       <main className="page">
         <section className="about-page">
           <article>

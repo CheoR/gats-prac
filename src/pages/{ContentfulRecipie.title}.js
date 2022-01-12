@@ -5,6 +5,7 @@ import { BsClockHistory, BsClock, BsPeople } from 'react-icons/bs'
 import slugify from 'slugify'
 
 import WrapperLayout from '../components/WrapperLayout'
+import SEO from '../components/SEO'
 
 const RecepieTemplate = ({ data }) => {
   const {
@@ -23,6 +24,7 @@ const RecepieTemplate = ({ data }) => {
 
   return (
     <WrapperLayout>
+      <SEO title={title} description={description} />
       <main className="page">
         <div className="recipe-page">
           <section className="recipe-hero">

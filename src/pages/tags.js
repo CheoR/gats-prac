@@ -4,6 +4,7 @@ import slugify from 'slugify'
 
 import WrapperLayout from '../components/WrapperLayout'
 import setupTags from '../utils/setupTags'
+import SEO from '../components/SEO'
 
 
 const Tags = ({ data }) => {
@@ -11,6 +12,7 @@ const Tags = ({ data }) => {
 
   return (
     <WrapperLayout>
+      <SEO title="Tags" />
       <main className="page">
         <section className="tags-page">
           {

@@ -4,12 +4,14 @@ import { graphql } from 'gatsby'
 
 import RecepiesList from '../components/RecipiesList'
 import WrapperLayout from '../components/WrapperLayout'
+import SEO from '../components/SEO'
 
 const TagTemplate = ({ data, pageContext }) => {
   const recepies = data.allContentfulRecipie.nodes
 
   return (
     <WrapperLayout>
+      <SEO title={pageContext.tag} />
       <main className="papge">
         <h2>{pageContext.tag}</h2>
         <div className="tag-recepies">

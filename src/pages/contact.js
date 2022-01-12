@@ -3,10 +3,12 @@ import { graphql } from 'gatsby'
 
 import WrapperLayout from '../components/WrapperLayout'
 import RecipiesList from '../components/RecipiesList'
+import SEO from '../components/SEO'
 
 export default function Contact({ data: { allContentfulRecipie: { nodes: recipes }} }) {
   return (
     <WrapperLayout>
+      <SEO title="contact" />
       <main className="page">
         <section className="contact-page">
           <article className="contact-info">

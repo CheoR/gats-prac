@@ -1,9 +1,11 @@
 import React from 'react'
+import SEO from '../components/SEO'
 import WrapperLayout from '../components/WrapperLayout'
 
 const Error = () => {
   return (
     <WrapperLayout>
+      <SEO title="Error" />
       <main className="error-page">
         <section>
           <h1>404</h1>

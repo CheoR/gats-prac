@@ -2,9 +2,11 @@ import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import WrapperLayout from "../components/WrapperLayout"
 import AllRecipies from "../components/AllRecipies"
+import SEO from "../components/SEO"
 export default function Home() {
   return (
     <WrapperLayout>
+      <SEO title="Home Page" description="I am the home page" />
       <main className="page">
         <header className="hero">
           <StaticImage
